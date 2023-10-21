@@ -16,12 +16,12 @@ Generic(제네릭)의 장점
 3. 비슷한 기능을 지원하는 경우 코드의 재사용성이 높아진다.
 
 
->#### Generic(제네릭) 사용방법
-> <T>	Type
-> <E>	Element
-> <K>	Key
-> <V>	Value
-> <N>	Number
+> #### Generic(제네릭) 사용방법
+> <T>-Type
+> <E>-Element
+> <K>-Key
+> <V>-Value
+> <N>-Number
 
 
 - 클래스 및 인터페이스 선언
