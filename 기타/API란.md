@@ -7,6 +7,6 @@ API (application programming interface 애플리케이션 프로그래밍 인터
 API를 사용하면 상세한 구현 방법을 알 필요 없이 데이터를 불러올 수 있어 프로그램 개발 절차가 단순해지므로 시간과 비용을 절약할 수 있다. 또한, API를 제공하는 입장에서도 보안을 유지하면서 리소스에 대한 액세스를 개방할 수 있다는 장점이 있다.[3] API 동작을 변경하지 않는 한 내부 시스템이 변경되어도 API의 동작은 동일하기 때문이다.
 
 ##
-[1] https://ko.wikipedia.org/wiki/API
-[2] https://aws.amazon.com/ko/what-is/restful-api/
+[1] https://ko.wikipedia.org/wiki/API<br>
+[2] https://aws.amazon.com/ko/what-is/restful-api/<br>
 [3] https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces
