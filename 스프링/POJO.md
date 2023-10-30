@@ -1,5 +1,5 @@
 
-POJO 기반의 구성
+## POJO 기반의 구성
 
 
 
@@ -55,6 +55,7 @@ public class CaregiverVO {
 
 POJO의 개념을 사용하지 않은 예시
 
+```
 public class ExampleListener implements MessageListener {
 
   public void onMessage(Message message) {
@@ -72,9 +73,11 @@ public class ExampleListener implements MessageListener {
   }
 
 }
+```
 
 POJO의 개념을 사용한 예시
 
+```
 @Component
 public class ExampleListener {
 
@@ -83,7 +86,7 @@ public class ExampleListener {
     System.out.println(message);
   }
 }
-
+```
 
 
 
