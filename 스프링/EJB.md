@@ -1,4 +1,4 @@
-EJB(Enterprise Java Bean)
+## EJB(Enterprise Java Bean)
 
 
 EJB(Enterprise Java Bean)란 기업환경의 시스템을 구현하기 위한 서버 측 컴포넌트 모델이다. 일반적으로 업무 로직을 가지고 있는 서버 어플리케이션을 EJB라고 한다.
