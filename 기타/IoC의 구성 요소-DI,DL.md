@@ -5,19 +5,22 @@ IoC는 DI와 DL의 의해 구현됩니다.
 1. DL(Dependency Lookup) - 의존성 검색
 
 컨테이너에서는 객체들을 관리하기 위해 별도의 저장소에 빈을 저장하는데 
-개발자들이 컨테이너에서 제공하는 API를 이용하여 사용하고자 하는빈 을 검색하는 방법입니다.
+개발자들이 컨테이너에서 제공하는 API를 이용하여 사용하고자 하는빈을 검색하는 방법입니다.
 
 아래와 같이 Bean에 대한 정보가 있는 XML 파일이 있다고 가정해 봅시다.
 
+```
 <beans>
 	<bean id="myObject" class="com.Hyun.MyObject" />
 </beans>
-
+```
 Java에서는 해당 XML의 Bean 정보를 보고 검색을 통해 어떤 클래스를 사용할 지 주입합니다.
 
+```
 String myConfigLoc = "classPath:myAppContect.xml";
 AbstractApplicationContext appCtx = new GenericXmlApplicationContext(myConfigLoc);
 MyObject myobject = appCtx.getBean("myObject", myobject.class);
+```
 
 그 결과 위와같은 코드를 통해 적절한 MyObject 클래스를 검색하여 가져올 수 있습니다.
 
@@ -53,6 +56,7 @@ MyObject myobject = appCtx.getBean("myObject", myobject.class);
 (1) Constructor Injection(생성자 주입)
 현재 가장 권장되는 의존 관계 주입 방식, Spring 공식 문서에서도 생성자 주입을 권장합니다.
 
+```
 public class Injection {
  
     private InjectionService injectionService;
@@ -63,15 +67,18 @@ public class Injection {
     	this.injectionService = injectionService;
     }
 }
+```
 
 생성자 주입이 가장 좋은 방법이지만, 이렇게 하면 매번 생성자를 만들어야 해서 귀찮고, 코드가 길어질 수 있는데 여기서 롬복(Lombok) 라이브러리를 사용하면 생성자 또한 어노테이션으로 생략할 수 있습니다.
 
+```
 @RequiredArgsConstructor
 public class Injection {
  
     private InjectionService injectionService;
     
 }
+```
 
 위의 코드를 보면 @RequiredArgsConstructor 은 롬복(Lombok)의 어노테이션 중 하나로 해당 어노테이션은 final 키워드가 붙은 주입에만 생성자를 만들어줍니다. 
 만약 final 키워드를 사용하지 않으면 @AllArgsConstructor 어노테이션을 사용하면 됩니다.
@@ -80,10 +87,12 @@ public class Injection {
 (2) Field Injection(필드 주입)
 어찌 보면 3가지 방법 중 가장 간단한 방법으로 Bean으로 등록된 객체를 사용하고자 하는 클래스에 Field로 선언한 뒤 @Autowired를 붙여주면 자동으로 의존 관계가 주입됩니다.
 
+```
 public class Injection {
 	@Autowired
     private InjectionService injectionService;
 }
+```
 
 - 필드 주입의 장점 : 간결한 코드
 - 필드 주입의 단점 : 참조 관계를 눈으로 확인하기 어렵고, 순환 참조를 막을 수 없음
@@ -93,6 +102,7 @@ public class Injection {
 Spring에서 @Autowired 어노테이션을 사용해서 Setter 메서드를 통해 주입하는 방법으로
 @Autowired는 Field, Setter Method, Constructor에 사용 가능합니다.
 
+```
 public class Injection {
 	
     private InjectionService injectionService;
@@ -102,7 +112,7 @@ public class Injection {
     	this.injectionService = injectionService;
     }
 }
-
+```
 
 [출처]
 https://devmoony.tistory.com/100
