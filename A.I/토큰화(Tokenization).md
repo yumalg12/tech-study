@@ -17,14 +17,14 @@
        입력 : Time is an illusion. Lunchtime double so!
        출력 : 'Time', 'is', 'an', 'illusion', 'Lunchtime', 'double', 'so'
 
+![image](https://github.com/yumalg12/tech-study/assets/74216748/945f0d90-ddac-438c-9438-b646868db925)
 
 
 문장 토큰화(Sentence Tokenization)
 
 문장 단위로 나누는 것 토큰의 기준을 문장으로 하는 경우이다.
 
-
-
+![image](https://github.com/yumalg12/tech-study/assets/74216748/0ef0e0be-2031-4dab-9096-607de5b4925e)
 
 
 출처 
