@@ -1,5 +1,7 @@
 ## JavaScript의 호이스팅
 
+### 정의
+
 JavaScript의 호이스팅 (Hoisting)은 코드 실행 전에 변수, 함수, 클래스, 또는 import 선언문을 해당 스코프(scope)의 최상단으로 이동시키는 것을 말한다. [1,2]
 
 호이스팅은 ECMAScript 사양 (JavaScript 언어의 규격)에서 공식적으로 정의된 용어는 아니지만, JavaScript에서 변수 및 함수 선언을 처리하는 방식을 설명하는 데 사용된다. [1]
@@ -15,12 +17,14 @@ JavaScript의 호이스팅 (Hoisting)은 코드 실행 전에 변수, 함수, �
 
 <br>
 
+### 호이스팅의 유형
+
 호이스팅으로 간주되는 동작의 유형은 다음과 같다. [1]
 
-1. 값 호이스팅 (Value Hoisting): 변수의 값을 선언 이전에 해당 스코프 내에서 사용할 수 있는 경우를 말합니다.
-2. 선언 호이스팅 (Declaration Hoisting): 변수를 선언 이전에 해당 변수를 참조할 수 있지만, 값이 정의되지 않은 경우를 말합니다. ReferenceError는 발생하지 않지만 값은 항상 정의되지 않은 상태입니다.
-3. 변수 선언은 선언된 줄 앞의 범위에서 동작을 변경시킨다.
-4. 선언의 부작용은 선언이 포함된 코드를 평가하기 전에 발생한다.
+1. **값 호이스팅 (Value Hoisting)**: 변수의 값을 선언 이전에 해당 스코프 내에서 사용할 수 있는 경우를 말합니다.
+2. **선언 호이스팅 (Declaration Hoisting)**: 변수를 선언 이전에 해당 변수를 참조할 수 있지만, 값이 정의되지 않은 경우를 말합니다. ReferenceError는 발생하지 않지만 값은 항상 정의되지 않은 상태입니다.
+3. **변수 선언**은 선언된 줄 앞의 범위에서 동작을 변경시킨다.
+4. **선언의 부작용**은 선언이 포함된 코드를 평가하기 전에 발생한다.
 
 <br>
 
@@ -36,6 +40,48 @@ TDZ는 해당 변수가 선언된 위치부터 초기화되기 전까지의 영�
 
 let과 const는 선언될 때 초기값을 지정하지 않으면 TDZ에 들어가며, TDZ 내부에서 변수를 참조할 경우 ReferenceError가 발생한다.
 반면에 var로 선언된 변수는 선언과 동시에 undefined로 초기화되어 메모리에 등록된다.[1,2]
+
+<br>
+
+### 호이스팅의 예시
+
+다음은 var와 const 변수 호이스팅의 예시이다.
+<table>
+  <thead>
+    <th></th>
+    <th>실행문</th>
+    <th>결과</th>
+  </thead>
+  <tbody>
+    <tr><td>var</td><td>
+var x = 1;<br>
+{<br>
+  console.log(x);<br>
+  var x = 2;<br>
+}
+    </td><td>1</td></tr>
+    <tr><td>const</td><td>
+const x = 1;<br>
+{<br>
+  console.log(x);<br>
+  const x = 2;<br>
+}
+    </td><td>
+      VM1808:3 Uncaught ReferenceError: <br>Cannot access 'x' before initialization at <anonymous>:3:15
+    </td></tr>
+    <tr><td>const</td><td>
+const x = 1;<br>
+{<br>
+  console.log(x);<br>
+}
+    </td><td>1</td></tr>
+  </tbody>
+</table>
+
+만약 const x = 2 선언이 호이스팅되지 않았다면 (=실행될 때만 효력이 발생한다면) console.log(x) 문은 var의 예시와 같이 상위 스코프에서 x 값을 읽어들였을 것이다.
+
+그러나 블록 스코프 내에서 선언된 const x = 2 가 호이스팅되었기 때문에 console.log(x) 문은 상위 범위에서 x 값을 읽을 수 없고, 초기화되지 않은 const x = 2 선언으로부터 x를 참조하려고 하여 ReferenceError가 발생하게 된다.
+
 
 <br>
 
