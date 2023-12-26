@@ -146,18 +146,14 @@ max-age로 지정된 시간이 경과하기 전까지는 다른 사전 요청을
 - Access-Control-Request-Headers: preflight 요청을 할 때 실제 요청에서 어떤 header를 사용할 것인지 서버에게 알리기 위해 사용
  
 #### 응답 헤더 목록
-- Access-Control-Allow-Origin: 브라우저가 해당 origin이 자원에 접근할 수 있도록 허용합니다. 혹은 *은 credentials이 없는 요청에 한해서 모든 origin에서 접근이 가능하도록 허용합니다.
-- Access-Control-Expose-Headers: 브라우저가 액세스할 수 있는 서버 화이트리스트 헤더를 허용합니다.
-- Access-Control-Max-Age: 얼마나 오랫동안 preflight요청이 캐싱 될 수 있는지를 나타낸다.
-- Access-Control-Allow-Credentials
-  - Credentials가 true 일 때 요청에 대한 응답이 노출될 수 있는지를 나타냅니다.
-  - preflight 요청에 대한 응답의 일부로 사용되는 경우 실제 자격 증명을 사용하여 실제 요청을 수행할 수 있는지를 나타냅니다.
-  - 간단한 GET 요청은 preflight되지 않으므로 자격 증명이 있는 리소스를 요청하면 헤더가 리소스와 함께 반환되지 않으면 브라우저에서 응답을 무시하고 웹 콘텐츠로 반환하지 않습니다.
-- Access-Control-Allow-Methods: preflight 요청에 대한 대한 응답으로 허용되는 메서드들을 나타냅니다.
-- Access-Control-Allow-Headers: preflight요청에 대한 대한 응답으로 실제 요청 시 사용할 수 있는 HTTP 헤더를 나타냅니다.
+- Access-Control-Allow-Origin: 특정 출처(origin)에서 리소스에 접근할 수 있는 권한을 부여하는 헤더이다. *은 모든 출처에서 접근 가능하도록 허용하는 것을 의미한다.
+- Access-Control-Expose-Headers: 브라우저가 액세스할 수 있는 서버에서 노출될 헤더들을 명시하는 헤더이다.
+- Access-Control-Max-Age: preflight 요청을 캐시할 수 있는 최대 시간(초)을 나타낸다.
+- Access-Control-Allow-Credentials: 자격 증명(credentials)을 사용하는 요청에 대한 응답이 노출될 수 있는지를 나타낸다. 이 헤더가 true로 설정되면 실제 자격 증명을 사용하여 요청을 수행할 수 있다.
+- Access-Control-Allow-Methods: preflight 요청에 대한 응답으로 허용되는 메서드(예: GET, POST 등)들을 나타낸다.
+- Access-Control-Allow-Headers: preflight 요청에 대한 응답으로 실제 요청 시 사용할 수 있는 HTTP 헤더를 나타낸다.
 
 <br>
-
 <br>
 
 ##
