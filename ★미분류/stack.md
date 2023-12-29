@@ -1,7 +1,7 @@
 # Stack
 
-자료의 입력과 출력을 한 곳으로
-**후입선출(LIFO: Last in First Out)** 입출력 형태를 갖는 선형 자료구조
+> 자료의 입력과 출력을 한 곳으로 <br>
+> **후입선출(LIFO: Last in First Out)** 입출력 형태를 갖는 선형 자료구조
 
 스택은 완전히 꽉 찼을 때 Overflow 상태라고 하며 완전히 비어 있으면 Underflow 상태라고 한다.
 
