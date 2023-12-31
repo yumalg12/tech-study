@@ -11,11 +11,15 @@
 
 ex) 예시
 from keras.layers import Dense
+
 model = Sequential()
+
 model.add(Dense(units=64, activation='relu', input_dim=100))
+
 model.output_shape#(None, 64)
 
 model.add(Dense(units=10, activation='softmax'))
+
 model.output_shape#(None, 10)
 
 
