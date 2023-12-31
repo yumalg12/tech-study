@@ -12,7 +12,7 @@ sass는 css의 전처리기, 즉 해석되어 css로 컴파일되는 스크립�
 scss는 sass의 3버전에서 등장한 언어이다. 퍼블리셔에게 익숙한 css와 비슷한 구문을 가지고 있으며, css와 완전히 호환되도록 새로운 구문을 도입한 css의 상위 호환 스타일시트이다. sass기능을 지원하되, css와 거의 같은 문법으로 사용된다는 점에서, 퍼블리셔들에게 각광받는 언어이다.
 
  
-### SCSS - SASS를 사용하는 이유? [2]
+### SASS, SCSS를 사용하는 이유? [2]
 css가 복잡한 언어는 아니지만 프로젝트의 크기가 커질수록 유지보수에 어려움이 생긴다. 예를 들어 기존의 CSS는 불필요한 선택자(Selector), 연산 기능 한계, 구문(Statement)의 부재의 문제점이 있고 SASS와 SCSS는 이러한 이슈를 해소시켜줄 수 있다.
 
 
@@ -77,7 +77,7 @@ nav {
 }
 ```
 
-###출처
+### 출처
 [1] https://heewon26.tistory.com/360 <br>
 [2] https://thdud4479.tistory.com/210 <br>
 [3] https://yunzema.tistory.com/269 <br>
