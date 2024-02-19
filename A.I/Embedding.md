@@ -52,4 +52,6 @@ ex) 대규모 말뭉치를 활용해서 임베딩을 미리 만들어 놓고 이
 (임베딩 값이 좋을수록 성능이 올라가고 손실률도 적습니다.)
 
 
-출처 : https://velog.io/@glad415/%EC%9E%84%EB%B2%A0%EB%94%A9Embedding%EC%9D%B4%EB%9E%80
+출처 
+https://velog.io/@glad415/%EC%9E%84%EB%B2%A0%EB%94%A9Embedding%EC%9D%B4%EB%9E%80
+https://casa-de-feel.tistory.com/28
