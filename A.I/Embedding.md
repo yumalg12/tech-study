@@ -55,4 +55,5 @@ ex) 대규모 말뭉치를 활용해서 임베딩을 미리 만들어 놓고 이
 출처 
 <br>
 https://velog.io/@glad415/%EC%9E%84%EB%B2%A0%EB%94%A9Embedding%EC%9D%B4%EB%9E%80
+<br>
 https://casa-de-feel.tistory.com/28
