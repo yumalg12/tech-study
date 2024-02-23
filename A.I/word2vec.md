@@ -14,7 +14,9 @@ Word2vec 모델은 Continous Bag of Words(CBoW)와 Skip-Gram 두 가지 방식�
  Continous Bag of Words(CBoW)
 
 - CBoW란? 주변에 있는 단어들을 가지고 중간에 있는 단어들을 예측하는 방법
-- 즉, "The fat cat sat on the mat"라는 문장이 있을때 sat을 예측하는것 
+- 즉, "The fat cat sat on the mat"라는 문장이 있을때 sat을 예측하는것
+
+
 ![sat](https://github.com/yumalg12/tech-study/assets/74216748/e2f38d82-67ce-49d3-bac8-7d334f8e2252)
 
 
